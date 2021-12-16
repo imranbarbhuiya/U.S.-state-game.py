@@ -28,7 +28,7 @@ while len(guessed_states) < len(all_states):
         if answer_state not in guessed_states:
             guessed_states.append(answer_state)
 
-states_to_learn = list(set(all_states) - set(guessed_states))
+states_to_learn = [state for state in all_states if state not in guessed_states]
 # print(f"You guessed {len(guessed_states)} states")
 # print(f"You need to learn {len(states_to_learn)} states")
 # print(states_to_learn)
