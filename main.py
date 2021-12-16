@@ -1,6 +1,5 @@
 import turtle
 import pandas
-from numpy import any
 
 screen = turtle.Screen()
 screen.title("U.S. States game")
@@ -28,7 +27,6 @@ while len(guessed_states) < len(all_states):
         t.write(answer_state)
         if answer_state not in guessed_states:
             guessed_states.append(answer_state)
-
 
 states_to_learn = list(set(all_states) - set(guessed_states))
 # print(f"You guessed {len(guessed_states)} states")
